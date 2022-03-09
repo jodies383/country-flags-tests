@@ -19,12 +19,8 @@ describe('The Country Flags Function', function () {
                 flag: '🇨🇱'
             },
             {
-                country: 'Zambia',
-                flag: '🇿🇲'
-            },
-            {
-                country: 'Uganda',
-                flag: '🇺🇬'
+                country: 'Ireland',
+                flag: '🇮🇪'
             },
             {
                 country: 'Malawi',
@@ -35,12 +31,16 @@ describe('The Country Flags Function', function () {
                 flag: '🇷🇼'
             },
             {
-                country: 'Ireland',
-                flag: '🇮🇪'
-            },
-            {
                 country: 'Switzerland',
                 flag: '🇨🇭'
+            },
+            {
+                country: 'Uganda',
+                flag: '🇺🇬'
+            },
+            {
+                country: 'Zambia',
+                flag: '🇿🇲'
             },
             {
                 country: 'India',
