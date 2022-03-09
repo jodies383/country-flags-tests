@@ -61,7 +61,6 @@ describe('The Country Flags Function', function () {
             ]), countryFlags.returnCountries());
         });
     });
-
     describe('Should return the country that was entered in the search box', function () {
         it('should return Brazil', function () {
             let countryFlags = CountryFlags();
