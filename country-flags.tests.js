@@ -6,7 +6,6 @@ describe('The Country Flags Function', function () {
             countryFlags.addCountry('South Africa', '🇿🇦')
             countryFlags.addCountry('India', '🇮🇳')
             countryFlags.addCountry('China', '🇨🇳')
-            
             assert.deepEqual(([{
                 country: 'Argentina',
                 flag: '🇦🇷'
@@ -44,16 +43,16 @@ describe('The Country Flags Function', function () {
                 flag: '🇨🇭'
             },
             {
-                country: 'India',
-                flag: '🇮🇳'
+                country: 'Sweden',
+                flag: '🇸🇪'
             },
             {
                 country: 'South Africa',
                 flag: '🇿🇦'
             },
             {
-                country: 'Sweden',
-                flag: '🇸🇪'
+                country: 'India',
+                flag: '🇮🇳'
             },
             {
                 country: 'China',
