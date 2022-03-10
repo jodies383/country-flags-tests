@@ -3,8 +3,6 @@ describe('The Country Flags Function', function () {
         // runs before each test in this block
         localStorage.clear();
     });
-
-
     describe('Should add a country and flag', function () {
         it('should add Sweden, South Africa, India and China to the list of countries', function () {
             let countryFlags = CountryFlags();
