@@ -1,4 +1,10 @@
 describe('The Country Flags Function', function () {
+    beforeEach(function() {
+        // runs before each test in this block
+        localStorage.clear();
+    });
+
+
     describe('Should add a country and flag', function () {
         it('should add Sweden, South Africa, India and China to the list of countries', function () {
             let countryFlags = CountryFlags();
@@ -88,14 +94,6 @@ describe('The Country Flags Function', function () {
                 flag: '🇨🇱'
             },
             {
-                country: 'China',
-                flag: '🇨🇳'
-            },
-            {
-                country: 'India',
-                flag: '🇮🇳'
-            },
-            {
                 country: 'Ireland',
                 flag: '🇮🇪'
             },
@@ -106,14 +104,6 @@ describe('The Country Flags Function', function () {
             {
                 country: 'Rwanda',
                 flag: '🇷🇼'
-            },
-            {
-                country: 'South Africa',
-                flag: '🇿🇦'
-            },
-            {
-                country: 'Sweden',
-                flag: '🇸🇪'
             },
             {
                 country: 'Switzerland',
@@ -133,15 +123,18 @@ describe('The Country Flags Function', function () {
     describe('Should return error messages', function () {
         it('should return the message "Please add a valid country and flag" since there was no country or flag added', function () {
             let countryFlags = CountryFlags();
-            assert.deepEqual(countryFlags.addCountry('', ''), ('Please add a valid country and flag'));
+            countryFlags.addCountry('', '')
+            assert.deepEqual(('Please add a valid country and flag'), countryFlags.returnMessage());
         });
         it('should return the message "Country or flag has already been added" since a duplicate Country has been entered', function () {
-            let countryFlags = CountryFlags();          
-            assert.deepEqual(countryFlags.addCountry('Uganda', '🇺🇬'), ('Country or flag has already been added'));
+            let countryFlags = CountryFlags();
+            countryFlags.addCountry('Uganda', '🇺🇬')          
+            assert.deepEqual(('Country or flag has already been added'), countryFlags.returnMessage());
         });
         it('should return the message "Please add a valid country and flag" since the Country or flag entered does not pass the regex', function () {
-            let countryFlags = CountryFlags();          
-            assert.deepEqual(countryFlags.addCountry('!"#', '098'), ('Please add a valid country and flag'));
+            let countryFlags = CountryFlags(); 
+            countryFlags.addCountry('!"#', '098')         
+            assert.deepEqual(('Please add a valid country and flag'), countryFlags.returnMessage());
         });
     });
 });
